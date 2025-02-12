@@ -1,5 +1,7 @@
 :root {
-  --tg-theme-bg-color: #f10000; /* Ваш бажаний колір */
+  --tg-theme-bg-color: #f1a500; /* Ваш бажаний колір */
+  --tg-theme-header-bg-color: #00f138; /* Ваш бажаний колір */
+  --tg-theme-bottom-bar-bg-color: #f10000; /* Ваш бажаний колір */
 }
 
 body {

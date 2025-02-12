@@ -18,7 +18,6 @@ export default async function RootLayout({ children }: PropsWithChildren) {
         {children}
       </Root>
     </I18nProvider>
-    <script src="https://telegram.org/js/telegram-web-app.js" defer></script>
 
     </body>
     </html>

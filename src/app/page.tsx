@@ -8,45 +8,12 @@ import { LocaleSwitcher } from '@/components/LocaleSwitcher/LocaleSwitcher';
 import { Page } from '@/components/Page';
 
 import tonSvg from './_assets/ton.svg';
-import {useEffect} from "react";
 
-declare global {
-  interface Window {
-    Telegram: any;
-  }
-}
-declare const Telegram: any;
 
 
 
 export default function Home() {
   const t = useTranslations('i18n');
-
-
-
-  useEffect(() => {
-    // Переконаємося, що код виконується тільки на клієнті
-    if (typeof window !== "undefined" && window.Telegram) {
-      // Налаштовуємо текст кнопки
-      Telegram.WebApp.MainButton.setText("Натисни мене!");
-
-      // Можна також змінити параметри кнопки (кольори, розміри тощо)
-      Telegram.WebApp.MainButton.setParams({
-        color: "#f0f4f9",
-        text_color: "#f0f4f9",
-        position: "left",
-
-      });
-      Telegram.WebApp.MainButton.show();
-      Telegram.WebApp.MainButton.disable();
-
-      // Додаємо обробник події на клік
-      Telegram.WebApp.MainButton.onClick(() => {
-        console.log("Кнопка була натиснута!");
-        // Тут можна додати вашу логіку (наприклад, відправлення даних)
-      });
-    }
-  }, []);
 
   return (
     <Page back={false}>
