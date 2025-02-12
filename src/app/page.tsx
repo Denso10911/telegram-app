@@ -35,16 +35,9 @@ export default function Home() {
         color: "#f0f4f9",
         text_color: "#f0f4f9",
         position: "left",
-
       });
       Telegram.WebApp.MainButton.show();
       Telegram.WebApp.MainButton.disable();
-
-      // Додаємо обробник події на клік
-      Telegram.WebApp.MainButton.onClick(() => {
-        console.log("Кнопка була натиснута!");
-        // Тут можна додати вашу логіку (наприклад, відправлення даних)
-      });
     }
   }, []);
 

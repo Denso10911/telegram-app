@@ -1,6 +1,6 @@
 'use client';
 
-import { backButton, themeParams, mainButton, setMiniAppBottomBarColor } from '@telegram-apps/sdk-react';
+import { backButton } from '@telegram-apps/sdk-react';
 import { PropsWithChildren, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
