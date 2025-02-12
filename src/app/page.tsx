@@ -31,7 +31,6 @@ export default function Home() {
       Telegram.WebApp.MainButton.setText("Натисни мене!");
 
       // Можна також змінити параметри кнопки (кольори, розміри тощо)
-      Telegram.WebApp.ThemeParams.secondary_bg_color;
       Telegram.WebApp.MainButton.setParams({
         color: "#f0f4f9",
         text_color: "#f0f4f9",
