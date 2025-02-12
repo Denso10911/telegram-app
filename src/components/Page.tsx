@@ -14,7 +14,7 @@ export function Page({ children, back = true }: PropsWithChildren<{
   const router = useRouter();
 
   useEffect(() => {
-    setMiniAppBottomBarColor("#ff0000")
+    // setMiniAppBottomBarColor("#ff0000")
     if (back) {
       backButton.show();
     } else {
