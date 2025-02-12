@@ -15,6 +15,9 @@ export function Page({ children, back = true }: PropsWithChildren<{
 
   useEffect(() => {
     mainButton.mount()
+    mainButton.setParams({
+      text: "Main",
+    })
 
     setMiniAppBottomBarColor("#ff0000")
     if (back) {
