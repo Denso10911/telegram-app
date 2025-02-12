@@ -1,7 +1,5 @@
 "use client"
 import {PropsWithChildren, useEffect} from 'react';
-import type { Metadata } from 'next';
-import { getLocale } from 'next-intl/server';
 
 import { Root } from '@/components/Root/Root';
 import { I18nProvider } from '@/core/i18n/provider';
@@ -19,8 +17,6 @@ declare const Telegram: any;
 
 
 export default async function RootLayout({ children }: PropsWithChildren) {
-  const locale = await getLocale();
-
 
   useEffect(() => {
     // Переконаємося, що код виконується тільки на клієнті
@@ -46,7 +42,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
   }, []);
 
   return (
-    <html lang={locale}>
+    <html>
     <body>
     <I18nProvider>
       <Root>
