@@ -17,7 +17,7 @@ export function Page({ children, back = true }: PropsWithChildren<{
     mainButton.setParams({
       text: 'Main',
     })
-    setMiniAppBottomBarColor("#1q1q1q")
+    setMiniAppBottomBarColor("#ff0000")
     if (back) {
       backButton.show();
     } else {
