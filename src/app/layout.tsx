@@ -20,11 +20,19 @@ export default async function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang={locale}>
     <body>
-      <I18nProvider>
-        <Root>
-          {children}
-        </Root>
-      </I18nProvider>
+    <I18nProvider>
+      <Root>
+        {children}
+      </Root>
+    </I18nProvider>
+      <script src="https://telegram.org/js/telegram-web-app.js" defer></script>
+      <script defer>
+        Telegram.WebApp.MainButton.setParams({
+          text: 'Main Button'
+        });
+
+        Telegram.WebApp.MainButton.show()
+      </script>
     </body>
     </html>
   );
