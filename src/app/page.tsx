@@ -34,9 +34,11 @@ export default function Home() {
       Telegram.WebApp.MainButton.setParams({
         color: "#f0f4f9",
         text_color: "#f0f4f9",
-        position: "left"
+        position: "left",
+
       });
       Telegram.WebApp.MainButton.show();
+      Telegram.WebApp.MainButton.disable();
 
       // Додаємо обробник події на клік
       Telegram.WebApp.MainButton.onClick(() => {

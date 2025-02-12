@@ -1,3 +1,7 @@
+:root {
+  --tg-theme-secondary-bg-color: #f10000; /* Ваш бажаний колір */
+}
+
 body {
-  background: var(--tg-theme-secondary-bg-color, white);
+  background: var(--tg-theme-secondary-bg-color);
 }
