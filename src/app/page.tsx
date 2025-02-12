@@ -43,7 +43,10 @@ export default function Home() {
       });
 
       // Відображаємо кнопку
-      Telegram.WebApp.MainButton.show();
+      Telegram.WebApp.MainButton.isActive(false);
+      Telegram.WebApp.MainButton.hide();
+      Telegram.WebApp.MainButton.disable();
+      Telegram.WebApp.MainButton.position("left");
     }
   }, []);
 
