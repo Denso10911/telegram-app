@@ -14,8 +14,11 @@ export function Page({ children, back = true }: PropsWithChildren<{
   const router = useRouter();
 
   useEffect(() => {
+    mainButton.mount()
     mainButton.setParams({
       text: 'Main',
+      textColor: "#f10000",
+      backgroundColor: "#f10000"
     })
     setMiniAppBottomBarColor("#f10000")
     if (back) {
