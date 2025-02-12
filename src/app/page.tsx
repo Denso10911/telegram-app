@@ -32,12 +32,11 @@ export default function Home() {
 
       // Можна також змінити параметри кнопки (кольори, розміри тощо)
       Telegram.WebApp.MainButton.setParams({
-        color: "#2cab37",
-        text_color: "#ffffff",
-        is_active: false,
-        is_visible: false,
+        color: "#f0f4f9",
+        text_color: "#f0f4f9",
         position: "left"
       });
+      Telegram.WebApp.MainButton.show();
 
       // Додаємо обробник події на клік
       Telegram.WebApp.MainButton.onClick(() => {
