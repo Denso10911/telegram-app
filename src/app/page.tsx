@@ -8,9 +8,44 @@ import { LocaleSwitcher } from '@/components/LocaleSwitcher/LocaleSwitcher';
 import { Page } from '@/components/Page';
 
 import tonSvg from './_assets/ton.svg';
+import {useEffect} from "react";
+
+declare global {
+  interface Window {
+    Telegram: any;
+  }
+}
+declare const Telegram: any;
+
+
 
 export default function Home() {
   const t = useTranslations('i18n');
+
+
+
+  useEffect(() => {
+    // Переконаємося, що код виконується тільки на клієнті
+    if (typeof window !== "undefined" && window.Telegram) {
+      // Налаштовуємо текст кнопки
+      Telegram.WebApp.MainButton.setText("Натисни мене!");
+
+      // Можна також змінити параметри кнопки (кольори, розміри тощо)
+      Telegram.WebApp.MainButton.setParams({
+        color: "#2cab37",
+        text_color: "#ffffff",
+      });
+
+      // Додаємо обробник події на клік
+      Telegram.WebApp.MainButton.onClick(() => {
+        console.log("Кнопка була натиснута!");
+        // Тут можна додати вашу логіку (наприклад, відправлення даних)
+      });
+
+      // Відображаємо кнопку
+      Telegram.WebApp.MainButton.show();
+    }
+  }, []);
 
   return (
     <Page back={false}>
