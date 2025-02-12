@@ -1,4 +1,4 @@
-import type { PropsWithChildren } from 'react';
+import {PropsWithChildren} from 'react';
 import type { Metadata } from 'next';
 import { getLocale } from 'next-intl/server';
 
@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: PropsWithChildren) {
   const locale = await getLocale();
 
+
   return (
     <html lang={locale}>
     <body>
@@ -25,14 +26,13 @@ export default async function RootLayout({ children }: PropsWithChildren) {
         {children}
       </Root>
     </I18nProvider>
-      <script src="https://telegram.org/js/telegram-web-app.js" defer></script>
-      <script defer>
-        Telegram.WebApp.MainButton.setParams({
-          text: 'Main Button'
-        });
-
-        Telegram.WebApp.MainButton.show()
-      </script>
+    <script src="https://telegram.org/js/telegram-web-app.js" defer></script>
+    <script defer>
+      {`
+      Telegram.WebApp.MainButton.setParams({text: "test"})
+      Telegram.WebApp.MainButton.show()
+      `}
+    </script>
     </body>
     </html>
   );
